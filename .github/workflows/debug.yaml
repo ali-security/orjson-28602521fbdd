@@ -1,9 +1,11 @@
 name: debug
-on: push
+on:
+  workflow_dispatch:
 jobs:
 
   debug:
     runs-on: ubuntu-22.04
+    timeout-minutes: 60
     strategy:
       fail-fast: false
       matrix:
